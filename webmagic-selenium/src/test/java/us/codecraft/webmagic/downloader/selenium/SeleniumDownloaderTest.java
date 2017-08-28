@@ -16,13 +16,13 @@ public class SeleniumDownloaderTest {
 
 	private String chromeDriverPath = "/Users/yihua/Downloads/chromedriver";
 
-	@Ignore("need chrome driver")
+	//@Ignore("need chrome driver")
 	@Test
 	public void test() {
 		SeleniumDownloader seleniumDownloader = new SeleniumDownloader(chromeDriverPath);
 		long time1 = System.currentTimeMillis();
 		for (int i = 0; i < 100; i++) {
-			Page page = seleniumDownloader.download(new Request("http://huaban.com/"), new Task() {
+			Page page = seleniumDownloader.download(new Request("http://www.hsnewsn.com/"), new Task() {
 				@Override
 				public String getUUID() {
 					return "huaban.com";
@@ -33,7 +33,7 @@ public class SeleniumDownloaderTest {
 					return Site.me();
 				}
 			});
-			System.out.println(page.getHtml().$("#waterfall").links().regex(".*pins.*").all());
+			System.out.println(page.getHtml().$("//body ").links().all());
 		}
 		System.out.println(System.currentTimeMillis() - time1);
 	}
