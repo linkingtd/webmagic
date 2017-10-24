@@ -39,8 +39,8 @@ public class UrlUtilsTest {
         Assert.assertEquals("www.dianping.com",UrlUtils.getDomain(url));
         url = "www.dianping.com/aa/";
         Assert.assertEquals("www.dianping.com",UrlUtils.getDomain(url));
-        url = "http://www.dianping.com";
-        Assert.assertEquals("www.dianping.com",UrlUtils.getDomain(url));
+        url = "http://tool.chinaz.com/Tools/unixtime.aspx";
+        Assert.assertEquals("tool.chinaz.com",UrlUtils.getDomain(url));
     }
 
 

@@ -16,13 +16,13 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class SpiderTest {
 
-    @Ignore("long time")
+    //@Ignore("long time")
     @Test
     public void testStartAndStop() throws InterruptedException {
         Spider spider = Spider.create(new SimplePageProcessor( "http://www.oschina.net/*")).addPipeline(new Pipeline() {
             @Override
             public void process(ResultItems resultItems, Task task) {
-                System.out.println(1);
+            	System.out.println(resultItems.get("title"));
             }
         }).thread(1).addUrl("http://www.oschina.net/");
         spider.start();
@@ -33,7 +33,7 @@ public class SpiderTest {
         Thread.sleep(10000);
     }
 
-    @Ignore("long time")
+    //@Ignore("long time")
     @Test
     public void testWaitAndNotify() throws InterruptedException {
         for (int i = 0; i < 10000; i++) {

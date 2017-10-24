@@ -32,6 +32,8 @@ public class DuplicateRemovedSchedulerTest {
     public void test_no_duplicate_removed_for_post_request() throws Exception {
         DuplicateRemover duplicateRemover = Mockito.mock(DuplicateRemover.class);
         duplicateRemovedScheduler.setDuplicateRemover(duplicateRemover);
+        
+        
         Request request = new Request("https://www.google.com/");
         request.setMethod(HttpConstant.Method.POST);
         duplicateRemovedScheduler.push(request, null);
@@ -42,6 +44,8 @@ public class DuplicateRemovedSchedulerTest {
     public void test_duplicate_removed_for_get_request() throws Exception {
         DuplicateRemover duplicateRemover = Mockito.mock(DuplicateRemover.class);
         duplicateRemovedScheduler.setDuplicateRemover(duplicateRemover);
+        
+        
         Request request = new Request("https://www.google.com/");
         request.setMethod(HttpConstant.Method.GET);
         duplicateRemovedScheduler.push(request, null);

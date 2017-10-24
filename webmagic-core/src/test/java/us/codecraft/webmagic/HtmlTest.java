@@ -17,6 +17,7 @@ public class HtmlTest {
     @Test
     public void testRegexSelector() {
         Html selectable = new Html("aaaaaaab");
+        System.out.println(selectable.regex("(a+b)").replace("aa(a)", ""));
 		assertThat(selectable.regex("(a+b)").replace("aa(a)", "$1bb").toString()).isEqualTo("abbabbab");
     }
 

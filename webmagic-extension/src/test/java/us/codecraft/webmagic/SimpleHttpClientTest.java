@@ -79,10 +79,11 @@ public class SimpleHttpClientTest {
         }
     }
 
-    @Ignore
+    //@Ignore
     @Test
     public void test() throws Exception {
         Weather weather = new SimpleHttpClient(Site.me()).get("http://www.weather.com.cn/weather/101020100.shtml", Weather.class);
+        System.out.println(weather);
         assertThat(weather).isNotNull();
     }
 
