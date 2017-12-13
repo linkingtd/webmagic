@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Vector;
+
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
@@ -48,21 +49,14 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description: 将日期字符串转换成日期型
-	 *
-	 * @param dateStr
-	 * @return @Version1.0 2012-11-5 上午08:50:21
+	 * 将日期字符串转换成日期型
 	 */
 	public static Date dateString2Date(String dateStr) {
 		return dateString2Date(dateStr, defaultPattern);
 	}
 
 	/**
-	 * Description: 将日期字符串转换成指定格式日期
-	 *
-	 * @param dateStr
-	 * @param partner
-	 * @return @Version1.0 2012-11-5 上午08:50:55
+	 * 将日期字符串转换成指定格式日期
 	 */
 	public static Date dateString2Date(String dateStr, String partner) {
 
@@ -78,9 +72,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	/**
 	 * 获取指定日期的年份
 	 *
-	 * @param p_date
-	 *            util.Date日期
-	 * @return int 年份
 	 */
 	public static int getYearOfDate(java.util.Date p_date) {
 		java.util.Calendar c = java.util.Calendar.getInstance();
@@ -89,22 +80,16 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description: 获取日期字符串的年份
+	 * 获取日期字符串的年份
 	 *
-	 * @param p_date
-	 *            字符串日期
-	 * @return int 年份 @Version1.0 2012-11-5 上午08:51:51
 	 */
 	public static int getYearOfDate(String p_date) {
 		return getYearOfDate(dateString2Date(p_date));
 	}
 
 	/**
-	 * Description: 获取指定日期的月份
+	 * 获取指定日期的月份
 	 *
-	 * @param p_date
-	 *            java.util.Date
-	 * @return int 月份 @Version1.0 2012-11-5 上午08:52:14
 	 */
 	public static int getMonthOfDate(java.util.Date p_date) {
 		java.util.Calendar c = java.util.Calendar.getInstance();
@@ -113,11 +98,8 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description: 获取日期字符串的月份
+	 * 获取日期字符串的月份
 	 *
-	 * @param date
-	 *            字符串日期
-	 * @return int 月份 @Version1.0 2012-11-5 上午08:53:22
 	 */
 	public static int getMonthOfDate(String date) {
 		return getMonthOfDate(dateString2Date(date));
@@ -126,9 +108,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	/**
 	 * 获取指定日期的日份
 	 *
-	 * @param p_date
-	 *            util.Date日期
-	 * @return int 日份
 	 */
 	public static int getDayOfDate(java.util.Date p_date) {
 		java.util.Calendar c = java.util.Calendar.getInstance();
@@ -139,9 +118,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	/**
 	 * 获取指定日期的周 与 Date .getDay()兼容
 	 *
-	 * @param date
-	 *            String 日期
-	 * @return int 周
 	 */
 	public static int getWeekOfDate(String date) {
 		java.util.Date p_date = dateString2Date(date);
@@ -150,10 +126,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 
 	/**
 	 * 获取指定日期的周 与 Date .getDay()兼容
-	 *
-	 * @param date
-	 *            util.Date日期
-	 * @return int 周
 	 */
 	public static int getWeekOfDate(Date date) {
 		java.util.Calendar c = java.util.Calendar.getInstance();
@@ -163,10 +135,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 
 	/**
 	 * 获取指定日期的小时
-	 *
-	 * @param p_date
-	 *            util.Date日期
-	 * @return int 日份
 	 */
 	public static int getHourOfDate(java.util.Date p_date) {
 		java.util.Calendar c = java.util.Calendar.getInstance();
@@ -176,10 +144,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 
 	/**
 	 * 获取指定日期的分钟
-	 *
-	 * @param p_date
-	 *            util.Date日期
-	 * @return int 分钟
 	 */
 	public static int getMinuteOfDate(java.util.Date p_date) {
 		java.util.Calendar c = java.util.Calendar.getInstance();
@@ -188,13 +152,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description: 日期转化指定格式的字符串型日期
-	 *
-	 * @param p_utilDate
-	 *            java.util.Date
-	 * @param p_format
-	 *            日期格式
-	 * @return 字符串格式日期 @Version1.0 2012-11-5 上午08:58:44 by
+	 * 日期转化指定格式的字符串型日期
 	 */
 	public static String date2String(java.util.Date p_utilDate, String p_format) {
 		String l_result = "";
@@ -206,11 +164,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description: 日期转化指定格式的字符串型日期
-	 *
-	 * @param p_utilDate
-	 *            java.util.Date
-	 * @return 字符串格式日期 @Version1.0 2012-11-5 上午08:58:58
+	 * 日期转化指定格式的字符串型日期
 	 */
 	public static String date2String(java.util.Date p_utilDate) {
 		return date2String(p_utilDate, defaultPattern);
@@ -219,13 +173,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	/**
 	 * Description: 时间计算(根据时间推算另个日期)
 	 *
-	 * @param date
-	 *            日期
-	 * @param type
-	 *            类型 y,M,d,h,m,s 年、月、日、时、分、秒
-	 * @param value
-	 *            添加值
-	 * @return @Version1.0 2012-4-12 下午12:59:39
+	 * 日期 类型 y,M,d,h,m,s 年、月、日、时、分、秒 添加值
 	 */
 	public static Date dateAdd(Date date, String type, int value) {
 		Calendar c = Calendar.getInstance();
@@ -246,25 +194,12 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param date
-	 * @param type
-	 * @param value
-	 * @return @Version1.0 2012-11-5 上午09:39:21
 	 */
 	public static Date dateAdd2Date(Date date, String type, int value) {
 		return dateAdd(date, type, value);
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param dateStr
-	 * @param type
-	 * @param value
-	 * @param pattern
-	 * @return @Version1.0 2012-11-5 上午09:18:13 ）
 	 */
 	public static Date dateAdd2Date(String dateStr, String type, int value, String pattern) {
 		Date date = DateUtils.dateString2Date(dateStr, pattern);
@@ -273,12 +208,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param dateStr
-	 * @param type
-	 * @param value
-	 * @return @Version1.0 2012-11-5 上午09:19:59
 	 */
 	public static Date dateAdd2Date(String dateStr, String type, int value) {
 		Date date = DateUtils.dateString2Date(dateStr, DateUtils.defaultPattern);
@@ -287,12 +216,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param date
-	 * @param type
-	 * @param value
-	 * @return @Version1.0 2012-11-5 上午09:43:47
 	 */
 	public static String dateAdd2String(Date date, String type, int value) {
 		Date dateD = dateAdd2Date(date, type, value);
@@ -300,13 +223,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param date
-	 * @param type
-	 * @param value
-	 * @param pattern
-	 * @return @Version1.0 2012-11-5 上午10:01:50
 	 */
 	public static String dateAdd2String(Date date, String type, int value, String pattern) {
 		Date dateD = dateAdd2Date(date, type, value);
@@ -314,13 +230,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param dateStr
-	 * @param type
-	 * @param value
-	 * @param pattern
-	 * @return @Version1.0 2012-11-5 上午09:43:24
 	 */
 	public static String dateAdd2String(String dateStr, String type, int value, String pattern) {
 		Date date = dateAdd2Date(dateStr, type, value, pattern);
@@ -328,12 +237,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param dateStr
-	 * @param type
-	 * @param value
-	 * @return @Version1.0 2012-11-5 上午09:42:12
 	 */
 	public static String dateAdd2String(String dateStr, String type, int value) {
 		Date date = dateAdd2Date(dateStr, type, value);
@@ -345,11 +248,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param dateStr
-	 * @param isAddDay
-	 * @return @Version1.0 2012-11-5 上午10:19:24
 	 */
 	public static String dateAdd2String(String dateStr, boolean isAddDay) {
 		String returndateStr = dateStr;
@@ -369,23 +267,12 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param dateStr
-	 * @return @Version1.0 2012-11-5 上午10:23:46
 	 */
 	public static String dateAdd2String(String dateStr) {
 		return dateAdd2String(dateStr, false);
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param dateStr
-	 * @param type
-	 * @param value
-	 * @param pattern
-	 * @return @Version1.0 2012-11-5 上午09:43:24
 	 */
 	public static String dateAdd2PatternString(String dateStr, String type, int value, String pattern) {
 		Date date = dateAdd2Date(dateStr, type, value, pattern);
@@ -393,13 +280,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * @param @param
-	 *            p_date
-	 * @param @return
-	 * @return boolean
-	 * @throws @Title:
-	 *             checkWeekendDay
-	 * @Description: 判断是平时还是周末
+	 * 判断是平时还是周末
 	 */
 
 	public static boolean checkWeekendDay(String p_date) {
@@ -412,17 +293,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * @param @param
-	 *            startTime
-	 * @param @param
-	 *            endTime
-	 * @param @return
-	 * @param @throws
-	 *            ParseException
-	 * @return String[][]
-	 * @throws @Title:
-	 *             getMonthsByTime
-	 * @Description: 按时间段计算月份跨度 计算出所包含的月份
+	 * 按时间段计算月份跨度 计算出所包含的月份
 	 */
 	@SuppressWarnings("static-access")
 	public static int[][] getMonthsByTime(String startTime, String endTime) {
@@ -470,37 +341,21 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	/**
 	 * yyyy-MM-dd HH:mm 格式日期 转化 为 M月d日HH:mm 格式日期
 	 *
-	 * @param date
-	 *            String
-	 * @return String
 	 */
 	public static String string2String(String date) throws ParseException {
 		return date2String(dateString2Date(date, dateTimePattern), dateMonthHourPattern);
 	}
 
 	/**
-	 * Description:
 	 *
-	 * @param date
-	 * @param pattern
-	 * @return
-	 * @throws ParseException
-	 * 			@Version1.0 2012-11-9 上午10:57:30
 	 */
 	public static String string2String(String date, String pattern) throws ParseException {
 		return date2String(dateString2Date(date), pattern);
 	}
 
 	/**
-	 * Description: 得到两个时间差
+	 * 得到两个时间差
 	 *
-	 * @param startTime
-	 *            开始时间
-	 * @param toTime
-	 *            结束时间
-	 * @param pattern
-	 *            日期格式字符串
-	 * @return long 时间差 @Version1.0 2012-11-5 上午09:04:45
 	 */
 	public static long getDateDiff(String startTime, String toTime, String pattern) {
 		long diff = getDateDiffLong(startTime, toTime, pattern);
@@ -509,12 +364,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param startTime
-	 * @param toTime
-	 * @param pattern
-	 * @return @Version1.0 2012-11-9 上午10:25:23
 	 */
 	public static long getDateDiffLong(String startTime, String toTime, String pattern) {
 		long diff = 0l;
@@ -532,28 +381,15 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description: 得到两个时间差
-	 *
-	 * @param startTime
-	 *            开始时间
-	 * @param toTime
-	 *            结束时间
-	 * @return long 时间差 @Version1.0 2012-11-5 上午09:05:27
+	 * 得到两个时间差
 	 */
 	public static long getDateDiff(String startTime, String toTime) {
 		return getDateDiff(startTime, toTime, dateTimePattern);
 	}
 
 	/**
-	 * Description: 得到两个时间差
+	 * 得到两个时间差
 	 *
-	 * @param startTimeD
-	 *            开始时间
-	 * @param toTime
-	 *            结束时间
-	 * @param pattern
-	 *            日期格式字符串
-	 * @return long 时间差 @Version1.0 2012-11-5 上午09:09:34
 	 */
 	public static long getDateDiff(Date startTimeD, String toTime, String pattern) {
 		long diff;
@@ -563,33 +399,19 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	}
 
 	/**
-	 * Description:
 	 *
-	 * @param hour
-	 * @param minute
-	 * @return @Version1.0 2012-11-5 上午10:26:46
 	 */
 	public static Integer getMinuteTotal(String hour, String minute) {
 		return getMinuteTotal(Integer.parseInt(hour), Integer.parseInt(minute));
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param hour
-	 * @param minute
-	 * @return @Version1.0 2012-11-5 上午10:26:50
 	 */
 	public static Integer getMinuteTotal(Integer hour, Integer minute) {
 		return hour * 60 + minute;
 	}
 
 	/**
-	 * Description:
-	 *
-	 * @param leaseTime
-	 * @param leaseDays
-	 * @return @Version1.0 2012-11-5 上午10:27:25
 	 */
 	public static String[] getallyearMonth(Date leaseTime, int leaseDays) {
 		List<String> yearList = new ArrayList<String>();
@@ -691,12 +513,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	/**
 	 * 获得指定日期及指定天数之内的所有日期列表
 	 *
-	 * @param pDate
-	 *            指定日期 格式:yyyy-MM-dd
-	 * @param count
-	 *            取指定日期后的count天
-	 * @return
-	 * @throws ParseException
+	 * 指定日期 格式:yyyy-MM-dd 取指定日期后的count天
 	 */
 	public static Vector<String> getDatePeriodDay(String pDate, int count) throws ParseException {
 		Vector<String> v = new Vector<String>();
@@ -716,12 +533,7 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	/**
 	 * 获得指定日期内的所有日期列表
 	 *
-	 * @param sDate
-	 *            指定开始日期 格式:yyyy-MM-dd
-	 * @param sDate
-	 *            指定开始日期 格式:yyyy-MM-dd
-	 * @return String[]
-	 * @throws ParseException
+	 * 指定开始日期 格式:yyyy-MM-dd 指定开始日期 格式:yyyy-MM-dd
 	 */
 	public static String[] getDatePeriodDay(String sDate, String eDate) throws ParseException {
 		if (dateCompare(sDate, eDate)) {
@@ -748,9 +560,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 	/**
 	 * 比较日期大小
 	 *
-	 * @param compareDate
-	 * @param toCompareDate
-	 * @return
 	 */
 
 	public static boolean dateCompare(String compareDate, String toCompareDate) {
@@ -767,9 +576,6 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 
 	/**
 	 * Description: 判断字符串是否日期格式(yyyy-MM-dd 或者 yyyy-MM-dd HH:mm)
-	 *
-	 * @param time
-	 * @return @Version1.0 2013-1-5 下午01:47:09
 	 */
 	public static boolean isDateFormat(String time) {
 		boolean isDate = true;
